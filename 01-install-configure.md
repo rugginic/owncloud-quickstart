@@ -25,6 +25,16 @@ In this document we will cover a standard single-server installation on [CentOS 
 - This guide assumes that you are connected as the `root` user.
 
 ## Prepare the Server
+According to [ownCloud documentation](https://doc.owncloud.com/server/admin_manual/installation/system_requirements.html) the supported environments for *best performance*, *stability*, *support*, and *full functionality* are:  
+
+| Platform                  | Options                                                                                                                                                                     |
+|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Operating Systems (64bit) | - Debian 9 and 10<br>- Fedora 30 and 31<br>- Red Hat Enterprise Linux/Centos 7.5 and 8<br>- SUSE Linux Enterprise Server 12 with SP4 and 15<br>- Ubuntu 16.04 and 18.04<br>- openSUSE Leap 42.3 and 15 |
+| Database                  | - MySQL 8+ or MariaDB 10+ (**Recommended**)<br>- Oracle 11 and 12<br>- PostgreSQL 9 and 10<br>- SQLite (**Not for production**)                                                                    |
+| Web server                | Apache 2.4 with `prefork` and `mod_php`                                                                                                                                   |
+| PHP Runtime               | 7.1, 7.2, and 7.3                                                                                                                                                           |
+
+
 First, make sure the server is up to date:
 ```sh
 yum update -y && yum upgrade
@@ -44,7 +54,7 @@ Enter the following commands in order to install and enable the **EPEL** (Extra 
 yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 ```
-**CentOS 7** ships by default with **PHP 5** thus, the **Remi** repository is needed to retrive and install **PHP 7**.  
+**CentOS 7** ships by default with **PHP 5** thus, the **Remi** repository is needed to retrieve and install **PHP 7**.  
 Next, using `yum-config-manger`, disable `remi-php54` and enable `remi-php73`.  
 `yum-config-manger` is provided by the package `yum-utils`.
 ```sh

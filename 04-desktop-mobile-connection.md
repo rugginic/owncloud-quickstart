@@ -6,7 +6,7 @@ nav_order: 4
 ---
 <!-- 4. As a user, how do I connect to the Owncloud server using a desktop or mobile client? -->
 # Connect to the Owncloud server using a desktop or mobile client
-Users can access their personal data stored within the ownCloud server via desktop clients and mobile apps.
+Users can access and synchronize their personal data stored within the ownCloud server via desktop clients and mobile apps.
 
 ## Dektop clients
 Desktop clients are available for [Mac Os](https://owncloud.org/download/#owncloud-desktop-client-macos), [Windows](https://owncloud.org/download/#owncloud-desktop-client-windows) and [Linux](https://owncloud.org/download/#owncloud-desktop-client-linux)
